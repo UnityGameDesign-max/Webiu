@@ -1,0 +1,20 @@
+@import '../../styles/variables.sass'
+    
+.position--text
+    position: absolute
+    left: 20px
+    
+.speaker-card-wrapper
+    width: 338px
+    height: 345px
+    position: relative
+    .speaker-occupation
+        @extend .position--text
+        color: $primary
+        font-weight: 600
+        bottom: 25px
+    .speaker-name
+        @extend .position--text
+        bottom: 50px
+        color: $text-color
+        
