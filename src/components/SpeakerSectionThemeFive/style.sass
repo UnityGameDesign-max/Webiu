@@ -1,0 +1,36 @@
+@import '../../styles/variables.sass'
+    
+.position--text
+    position: absolute
+    left: 20px
+.speaker-section-wrapper
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 30px
+    .speaker-section-heading
+        margin-bottom: 40px
+    .speakerBtn
+        border-radius: 40px
+        border: none
+        width: 14rem
+        font-weight: 600
+        margin-block: 35px
+        padding: 12px 50px 12px 50px
+        color: $light-grey
+        background-color: #14F195
+.speaker-section-heading
+    color: $light-grey
+.speaker-card-wrapper
+    width: 338px
+    height: 345px
+    position: relative
+    .speaker-occupation
+        @extend .position--text
+        color: $primary
+        font-weight: 600
+        bottom: 25px
+    .speaker-name
+        @extend .position--text
+        bottom: 50px
+        color: $light-grey
+        
