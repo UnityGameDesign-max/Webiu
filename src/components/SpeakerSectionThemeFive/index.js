@@ -7,37 +7,40 @@ export const SpeakerSectionThemeFive = ({
   speakers,
   speakerHeading,
   linearGradient,
+  backgroundImage
 }) => {
   return (
     <div
       className="speaker-section-wrapper"
       style={{
-        backgroundImage: `${linearGradient}, url(/images/gradient.png)`,
+        backgroundImage: `${linearGradient}, url(${backgroundImage})`,
       }}
     >
       <Container>
         <Row className="justify-content-center">
-          {speakerHeading ? (
-            <Col className="text-center">
-              <h1 className="speaker-section-heading">{speakerHeading}</h1>
-            </Col>
-          ) : null}
-        </Row>
-        <Row xs={3} className="justify-content-center">
-          {speakers
-            ? speakers.map((speaker, index) => (
-                <Col key={index}>
-                  <SpeakerCardThemeFive
-                    image={speaker.image}
-                    occupation={speaker.occupation}
-                    name={speaker.name}
-                  />
-                </Col>
-              ))
-            : null}
-        </Row>
-        <Row className="justify-content-center">
-          <button className="speakerBtn">View All</button>
+          <Row>
+            {speakerHeading ? (
+              <Col className="text-center">
+                <h1 className="speaker-section-heading">{speakerHeading}</h1>
+              </Col>
+            ) : null}
+          </Row>
+          <Row xs={3}>
+            {speakers
+              ? speakers.map((speaker, index) => (
+                  <Col className="justify-content-center" key={index}>
+                    <SpeakerCardThemeFive
+                      image={speaker.image}
+                      occupation={speaker.occupation}
+                      name={speaker.name}
+                    />
+                  </Col>
+                ))
+              : null}
+          </Row>
+          <Row>
+            <button className="speakerBtn">View All</button>
+          </Row>
         </Row>
       </Container>
     </div>
@@ -47,5 +50,6 @@ export const SpeakerSectionThemeFive = ({
 SpeakerSectionThemeFive.propTypes = {
   speakers: PropTypes.array,
   speakerHeading: PropTypes.string,
-  linearGradient: PropTypes.string
+  linearGradient: PropTypes.string,
+  backgroundImage: PropTypes.string
 }

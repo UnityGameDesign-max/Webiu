@@ -3,11 +3,9 @@ import PropTypes from "prop-types"
 import "./style.sass"
 
 export const SpeakerCardThemeFive = ({ image, occupation, name }) => {
-  const backgroundImageOfSpeaker = {
-    backgroundImage: `url(${image})`,
-    backgroundRepeat: "no-repeat",
-  }
-
+  
+  const backgroundImageOfSpeaker = {backgroundImage: `url(${image})`}
+  
   return (
     <div style={backgroundImageOfSpeaker} className="speaker-card-wrapper">
       <h3 className="speaker-name">{name}</h3>

@@ -3,9 +3,11 @@
 .position--text
     position: absolute
     left: 20px
-.speaker-section-wrapper
+.background--image-cover-norepeat
     background-repeat: no-repeat
     background-size: cover
+.speaker-section-wrapper
+    @extend .background--image-cover-norepeat
     padding: 30px
     .speaker-section-heading
         margin-bottom: 40px
@@ -16,14 +18,17 @@
         font-weight: 600
         margin-block: 35px
         padding: 12px 50px 12px 50px
-        color: $light-grey
+        color: #fff
         background-color: #14F195
 .speaker-section-heading
-    color: $light-grey
+    color: #fff
 .speaker-card-wrapper
     width: 338px
     height: 345px
     position: relative
+    margin-bottom: 20px
+    border-radius: 28px
+    @extend .background--image-cover-norepeat
     .speaker-occupation
         @extend .position--text
         color: $primary
@@ -32,5 +37,5 @@
     .speaker-name
         @extend .position--text
         bottom: 50px
-        color: $light-grey
+        color: #fff
         
